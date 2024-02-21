@@ -1,0 +1,15 @@
+%%mocodo
+:
+Catégories: num_cat, nom, created_at, updated_at
+:
+Films: num_film, nom, extrait, pitch, affiche, année, created_at, updated_at, #num_cat > Catégories > num_cat, #num_real > Réalisateurs > num_real
+:::
+Réalisateurs: num_real, nom, created_at, updated_at
+:
+
+
+:::::
+Jouent_Dans: #num_film > Films > num_film, _#num_act > Acteurs > num_act
+:
+Acteurs: num_act, nom, created_at, updated_at
+:

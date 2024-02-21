@@ -1,0 +1,2 @@
+# Gère les mauvaises url en renvoyant sur la page 404 faite maison
+ErrorDocument 404 /notfound.html

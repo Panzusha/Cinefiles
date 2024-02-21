@@ -1,0 +1,9 @@
+Catégories: num_cat, nom, created_at, updated_at
+Défini, 0N Catégories, 11> Films
+Films: num_film, nom, extrait, pitch, affiche, année, created_at, updated_at
+Fait_Par, 11 Films, 0N> Réalisateurs
+Réalisateurs: num_real, nom, created_at, updated_at
+
+:::
+Jouent_Dans, 1N> Films, 1N Acteurs
+Acteurs: num_act, nom, created_at, updated_at

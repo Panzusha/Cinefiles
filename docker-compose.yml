@@ -1,0 +1,34 @@
+services:
+  app: # On appelle notre service "app"
+    build: . # Chemin vers le Dockerfile de notre image
+    depends_on:
+      - db
+    ports:
+      - "8084:80" # On rend le serveur Apache (port 80) de notre conteneur accessible depuis le port 8080 de notre hôte local (host:conteneur)
+    volumes:
+      - .:/var/www # On créé un volume pour que nos fichiers soient disponibles sur notre conteneur (dossier_host:dossier_conteneur)
+    
+
+  db:
+    image: mysql:8.3
+    # NOTE: use of "mysql_native_password" is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
+    # (this is just an example, not intended to be a production configuration)
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - "33062:3306"
+    environment:
+    - MYSQL_DATABASE=cinefiles # Permet de récupérer le nom de BDD du .env
+    - MYSQL_ALLOW_EMPTY_PASSWORD=yes # Autorise à ne pas avoir de mot de passe
+    - MYSQL_ROOT_PASSWORD=
+
+
+  phpmyadmin:
+    image: phpmyadmin:5.2
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - 8082:80
+    environment:
+      PMA_HOST: db

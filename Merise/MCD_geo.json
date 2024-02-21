@@ -1,0 +1,35 @@
+{
+  "width": 518,
+  "height": 289,
+  "cx": [
+    [ "CATEGORIES", 49 ],
+    [ "DEFINI", 146 ],
+    [ "FILMS", 243 ],
+    [ "FAIT_PAR", 347 ],
+    [ "REALISATEURS", 466 ],
+    [ "JOUENT_DANS", 347 ],
+    [ "ACTEURS", 466 ]
+  ],
+  "cy": [
+    [ "CATEGORIES", 94 ],
+    [ "DEFINI", 94 ],
+    [ "FILMS", 94 ],
+    [ "FAIT_PAR", 94 ],
+    [ "REALISATEURS", 94 ],
+    [ "JOUENT_DANS", 229 ],
+    [ "ACTEURS", 229 ]
+  ],
+  "shift": [
+    [ "DEFINI,CATEGORIES,0", 0 ],
+    [ "DEFINI,FILMS,0", 0 ],
+    [ "FAIT_PAR,FILMS,0", 0 ],
+    [ "FAIT_PAR,REALISATEURS,0", 0 ],
+    [ "JOUENT_DANS,FILMS,0", 0 ],
+    [ "JOUENT_DANS,ACTEURS,0", 0 ]
+  ],
+  "ratio": [
+    [ "DEFINI,FILMS,0", 1.0 ],
+    [ "FAIT_PAR,REALISATEURS,0", 1.0 ],
+    [ "JOUENT_DANS,FILMS,0", 1.0 ]
+  ]
+}
