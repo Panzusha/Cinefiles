@@ -1,0 +1,65 @@
+:root {
+    --step--2: clamp(0.6944rem, 0.6855rem + 0.0446vw, 0.72rem);
+    --step--1: clamp(0.8331rem, 0.8099rem + 0.1163vw, 0.9rem);
+    --step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --step-1: clamp(1.2rem, 1.1283rem + 0.3587vw, 1.4063rem);
+    --step-2: clamp(1.44rem, 1.3293rem + 0.5533vw, 1.7581rem);
+    --step-3: clamp(1.7281rem, 1.5649rem + 0.8163vw, 2.1975rem);
+    --step-4: clamp(2.0738rem, 1.8396rem + 1.1707vw, 2.7469rem);
+    --step-5: clamp(2.4881rem, 2.1594rem + 1.6435vw, 3.4331rem);
+    }
+
+@font-face {
+    font-family: Chelsea;
+    src: url(/Ressources/Chelsea.ttf)
+}
+
+* {
+    font-family: Chelsea;
+}
+
+body {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-image: url("/Ressources/Images/salledeciné.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#bouton {
+    background-color: red;
+    font-size: var(--step-2);
+    height: auto;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#bouton:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#affiche {
+    max-width: 25%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+h1 {
+    color: rgb(34, 245, 2);
+    font-size: var(--step-5);
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-size: var(--step-2);
+    text-align: center;
+}
+
+#categ {
+
+}

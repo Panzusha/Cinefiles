@@ -25,18 +25,24 @@ $films = getFilms($pdo);
     </header>
     <nav>
         <div id="barreNav">
-            <a href="./create.php" class="btnNav">Ajouter</a>
-            <a href="./delete.php" class="btnNav">Supprimer</a>
-            <a href="./update.php" class="btnNav">Modifier</a>
+            <a href="./create.php" class="glow-on-hover">Ajouter</a>
+            <a href="./delete.php" class="glow-on-hover">Supprimer</a>
         </div>
     </nav>
     <?php foreach ($films as $film): ?>
     <main>
-        <section>
-            <p><?=$film['nom']?></p>
-            <p><?=$film['extrait']?></p>
+        <img class="affiche" src="<?=$film['affiche']?>"/>
+        <div class="bloctexte">
+            <p id="nomFilm"><?=$film['nom']?></p>
             <p><?=$film['annee']?></p>
-        </section>
+            <p><?=$film['réal']?></p>
+            <p id="categFilm"><?=$film['categ']?></p>
+            <p><?=$film['extrait']?></p>
+            <div id="boutons">
+                <a href="./film.php?id=<?=$film['id']?>" id="lien">Lire la critique</a>
+                <a href="./update.php?id=<?=$film['id']?>" id="lien2">Modifier</a>
+            </div>
+        </div>
     </main>
     <?php endforeach; ?>
     <footer>

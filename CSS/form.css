@@ -1,0 +1,49 @@
+body {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-image: url("/Ressources/Images/machines.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#bouton {
+    background-color: red;
+    font-size: var(--step-2);
+    height: auto;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#bouton:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(246, 4, 4);
+    font-weight: bold;
+}
+
+#create {
+    text-align: center;
+}
+
+#delete {
+    text-align: center;
+}
+
+#update {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color:rgb(8, 247, 4)
+}
