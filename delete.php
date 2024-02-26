@@ -9,17 +9,12 @@ if (! empty($_POST)) {
 
 $films = getFilms($pdo);
 
+
+$fichier_css = "form";
+$title = "Delete";
+include "./templates/header.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete</title>
-    <link rel="stylesheet" href="./CSS/form.css">
-</head>
-<body>
     <a href='./index.php'><button id="bouton">Retour Page Accueil</button></a>
     <h1>Bienvenue dans la salle des machines<br/>Ici on peut effacer des films de la BDD</h1>
     <br/>
@@ -40,5 +35,6 @@ $films = getFilms($pdo);
     Et donc svp ne pas toucher aux valeurs 1 à 10<br/>
     De "I saw the devil" à "Dobermann"<br/>
     Merci pour votre attention :-)</p>
-</body>
-</html>
+<?php
+    include "./templates/footer.php";
+?>

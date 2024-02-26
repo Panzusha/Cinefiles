@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: Chelsea;
-    src: url(/Ressources/Chelsea.ttf)
+    src: url(/ressourcesChelsea.ttf)
 }
 
 * {
@@ -21,7 +21,7 @@
 body {
     margin-left: 100px;
     margin-right: 100px;
-    background-image: url("/Ressources/Images/salledeciné.png");
+    background-image: url("/ressources/images/salledeciné.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -60,6 +60,3 @@ p {
     text-align: center;
 }
 
-#categ {
-
-}

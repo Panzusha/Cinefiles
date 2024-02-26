@@ -1,6 +1,6 @@
 <?php
 
-if (! empty($_POST)) {
+if (!empty($_POST)) {
     require_once __DIR__.'/fonctions.php';
 
     $pdo = getPDO('mysql:host=db;dbname=cinefiles', 'root', '');
@@ -9,18 +9,13 @@ if (! empty($_POST)) {
         $_POST['annee'], $_POST['real_id'], $_POST['cat_id'] );
 }
 
+$title = "Create";
+$fichier_css = "form";
+include "./templates/header.php";
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
-    <link rel="stylesheet" href="./CSS/form.css">
-</head>
-<body>
-    <a href='./index.php'><button id="bouton">Retour Page Accueil</button></a>
+    <a href='./index.php' id="bouton">Retour Page Accueil</a>
     <h1>Bienvenue dans la salle des machines<br/>Ici on peut créer de nouveaux film dans la BDD</h1>
     <br/>
     <form id="create" action="" method="post">
@@ -68,6 +63,7 @@ if (! empty($_POST)) {
         Pour le champ Affiche il est recommandé de mettre le lien URL vers une image de votre choix<br/>
         <br/>
         Les grands champs de texte sont étirables via l'icône en bas à droite
-
-</body>
-</html>
+    </p>
+<?php
+    include "./templates/footer.php";
+?>

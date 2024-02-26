@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: Chelsea;
-    src: url(/Ressources/Chelsea.ttf)
+    src: url(/ressources/Chelsea.ttf)
 }
 
 * {
@@ -25,7 +25,7 @@
 body {
     margin-left: 100px;
     margin-right: 100px;
-    background-image: url("/Ressources/Images/oldcine.jpg");
+    background-image: url("/ressources/images/oldcine.jpg");
     background-size: contain;
     background-repeat: repeat;
 }

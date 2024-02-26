@@ -10,19 +10,10 @@ if (! empty($_POST)) {
 
 $film = getFilm(intval($_GET['id']), $pdo);
 
-var_dump($film);
-
+$title = "Update";
+$fichier_css = "form";
+include "./templates/header.php";
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update</title>
-    <link rel="stylesheet" href="./CSS/form.css">
-</head>
-<body>
     <a href='./index.php'><button id="bouton">Retour Page Accueil</button></a>
     <h1>Bienvenue dans la salle des machines<br/>Ici on peut modifier des films dans la BDD</h1>
     <br/>
@@ -50,5 +41,6 @@ var_dump($film);
         <br/>
         <input type="submit" value="Modifier">
     </form>
-</body>
-</html>
+<?php
+    include "./templates/footer.php";
+?>

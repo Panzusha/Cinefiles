@@ -22,8 +22,8 @@ function getFilm(int $id, PDO $pdo): array|false {
         FROM films f
         JOIN realisateurs r ON f.real_id = r.id
         JOIN categories c ON f.cat_id = c.id
-        JOIN jouentDans j on j.film_id = f.id
-        JOIN acteurs a ON a.id = j.acteur_id
+        LEFT JOIN jouentDans j on j.film_id = f.id
+        LEFT JOIN acteurs a ON a.id = j.acteur_id
         WHERE f.id = :id
     ');
     $query->execute([
