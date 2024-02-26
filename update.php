@@ -14,7 +14,7 @@ $title = "Update";
 $fichier_css = "form";
 include "./templates/header.php";
 ?>
-    <a href='./index.php'><button id="bouton">Retour Page Accueil</button></a>
+    <a href='./index.php' id="bouton">Retour Page Accueil</a>
     <h1>Bienvenue dans la salle des machines<br/>Ici on peut modifier des films dans la BDD</h1>
     <br/>
     <form id="update" action="" method="post">
@@ -41,6 +41,11 @@ include "./templates/header.php";
         <br/>
         <input type="submit" value="Modifier">
     </form>
+    <p>Message de la direction :<br/>
+    Veuillez remettre les valeurs initiales si vous modifiez un des 10 premiers films<br/>
+    De "I saw the devil" à "Dobermann"<br/>
+    Vous êtes libres concernant les films que vous ajouterez<br/>
+    Merci pour votre attention :-)</p>
 <?php
     include "./templates/footer.php";
 ?>

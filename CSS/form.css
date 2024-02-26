@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 body {
     margin-left: 100px;
     margin-right: 100px;
@@ -8,15 +12,16 @@ body {
 }
 
 #bouton {
-    display: inline-block;
-    background-color: red;
-    font-size: var(--step-2);
-    height: auto;
-    width: 150px;
+    background-color: #da1111;
     border-radius: 20px;
-    margin-top: 20px;
-    padding: 5px 15px;
-    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: var(--step-2);
+    color: rgb(2, 2, 2);
+    display: inline-block;
+    margin-right: 20px;
 }
 
 #bouton:hover {

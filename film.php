@@ -10,7 +10,7 @@ $fichier_css = "film";
 $title = "Read";
 include "./templates/header.php";
 ?>
-<a href='./index.php'><button id="bouton">Retour Page Accueil</button></a>
+<a href='./index.php' id="bouton">Retour Page Accueil</a>
 <img id="affiche" src="<?= $film['affiche'] ?>" />
 <div class="bloctexte">
     <h1><?= $film['nom'] ?></h1>

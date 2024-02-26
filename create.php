@@ -1,9 +1,12 @@
 <?php
+require_once __DIR__.'/fonctions.php';
+$pdo = getPDO('mysql:host=db;dbname=cinefiles', 'root', '');
+
+$realisateurs = getRealisateurs($pdo);
+$categories = getCategories($pdo);
+
 
 if (!empty($_POST)) {
-    require_once __DIR__.'/fonctions.php';
-
-    $pdo = getPDO('mysql:host=db;dbname=cinefiles', 'root', '');
     
     createFilm($pdo, $_POST['nom'], $_POST['extrait'],$_POST['pitch'], $_POST['affiche'],
         $_POST['annee'], $_POST['real_id'], $_POST['cat_id'] );
@@ -33,34 +36,51 @@ include "./templates/header.php";
         </div>
         <div>
             <label for="affiche">Affiche</label>
-            <textarea name="affiche" id="affiche"></textarea>
+            <textarea name="affiche" id="affiche" placeholder="lien url image"></textarea>
         </div>
         <div>
             <label for="annee">Annee</label>
             <input type="number" name="annee" id="annee">
         </div>
         <div>
-            <label for="real_id">Réalisateur</label>
-            <input type="number" name="real_id" id="real_id">
+        <label for="real_id">Réalisateur</label>
+        <select name="real_id" id="real_id">
+            <?php
+            foreach ($realisateurs as $realisateur) {
+                ?>
+                <option value="<?= $realisateur['id'] ?>">
+                    <?= $realisateur['nom'] ?>
+                    </option>
+                    <?php
+            }
+            ?>
+        </select>
         </div>
         <div>
-            <label for="cat_id">Catégorie</label>
-            <input type="number" name="cat_id" id="cat_id">
+        <label for="cat_id">Catégorie</label>
+        <select name="cat_id" id="cat_id">
+            <?php
+            foreach ($categories as $categorie) {
+                ?>
+                <option value="<?= $categorie['id'] ?>">
+                    <?= $categorie['nom'] ?>
+                    </option>
+                    <?php
+            }
+            ?>
+        </select>
         </div>
         <br/>
         <input type="submit" value="Publier">
     </form>
-    <p>Info : Dans le champ Réalisateur il faut rentrer un chiffre de 1 à 12 sinon il y aura un message d'erreur.<br/>
-        Voir dans la BDD pour les correspondances chiffre<=>nom<br/>
-        <br/>
+    <p>Info : 
         Si vous souhaitez ajouter un film réalisé par quelqu'un ne figurant pas dans la BDD<br/> vous pouvez ajouter
-        ce réalisateur dans la table du même nom et utiliser l'ID auto incrémenté qui figurera après l'ajout<br/>
+        ce réalisateur dans la table du même nom<br/>
         <br/>
         Pour faire un ajout, cliquez sur la table désirée et ensuite onglet "Insérer" dans la partie haute de l'interface<br/>
         Même fonctionnement pour les catégories de films <br/>
         <br/>
         Les modalités d'accès à la BDD sont détaillées dans le README.md du repo github<br/>
-        Pour le champ Affiche il est recommandé de mettre le lien URL vers une image de votre choix<br/>
         <br/>
         Les grands champs de texte sont étirables via l'icône en bas à droite
     </p>

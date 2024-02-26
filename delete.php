@@ -10,16 +10,17 @@ if (! empty($_POST)) {
 $films = getFilms($pdo);
 
 
-$fichier_css = "form";
+
 $title = "Delete";
+$fichier_css = "form";
 include "./templates/header.php";
 ?>
 
-    <a href='./index.php'><button id="bouton">Retour Page Accueil</button></a>
+    <a href='./index.php' id="bouton">Retour Page Accueil</a>
     <h1>Bienvenue dans la salle des machines<br/>Ici on peut effacer des films de la BDD</h1>
     <br/>
     <form id="delete" action="" method="post">
-        <label for="id">Article à supprimer</label>
+        <label for="id">Film à supprimer</label>
         <select name="id" id="id">
             <?php foreach ($films as $film) : ?>
             <option value="<?= htmlspecialchars((string) $film['id']) ?>"><?= htmlspecialchars($film['nom']) ?></option>

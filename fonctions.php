@@ -32,6 +32,19 @@ function getFilm(int $id, PDO $pdo): array|false {
     return $query->fetch(PDO::FETCH_ASSOC);
 }
 
+function getRealisateurs(PDO $pdo): array{
+    $query = $pdo->prepare('SELECT * FROM realisateurs');
+    $query->execute();
+    $realisateurs = $query->fetchAll(PDO::FETCH_ASSOC);
+    return $realisateurs;
+}
+function getCategories(PDO $pdo): array{
+    $query = $pdo->prepare('SELECT * FROM categories');
+    $query->execute();
+    $categories = $query->fetchAll(PDO::FETCH_ASSOC);
+    return $categories;
+}
+
 function createFilm(PDO $pdo, string $nom, string $extrait, string $pitch, string $affiche, int $annee, int $real_id, int $cat_id):bool {
 
         $query = $pdo->prepare('INSERT INTO films (nom, extrait, pitch, affiche, annee, real_id, cat_id) VALUES (:nom, :extrait, :pitch, :affiche, :annee, :real_id, :cat_id)');

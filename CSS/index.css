@@ -273,6 +273,20 @@ footer p {
     #lien2 {
         font-size: var(--step-0);
     }
+    #barreNav {
+        display: flex;
+        flex-direction: column;
+    }
+    .glow-on-hover {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #planet1 {
+        opacity: 0;
+    }
+    #planet2 {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 500px) {
@@ -281,6 +295,6 @@ footer p {
         margin-bottom: 15px;
     }
     #lien2 {
-        font-size: var(--step-0);
+        font-size: var(--step-2);
     }
 }
