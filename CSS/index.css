@@ -1,7 +1,10 @@
 /* 
 *** Général ***
+Gère la mise en forme des éléments globaux
 */
 
+/* Code généré sur un site pour rendre la taille des textes responsive
+les step-x seront utilisés en font-size */
 :root {
     --step--2: clamp(0.6944rem, 0.6855rem + 0.0446vw, 0.72rem);
     --step--1: clamp(0.8331rem, 0.8099rem + 0.1163vw, 0.9rem);
@@ -13,6 +16,7 @@
     --step-5: clamp(2.4881rem, 2.1594rem + 1.6435vw, 3.4331rem);
     }
 
+/* Importation et utilisation de la police */
 @font-face {
     font-family: Chelsea;
     src: url(/ressources/Chelsea.ttf)
@@ -22,6 +26,7 @@
     font-family: Chelsea;
 }
 
+/* Corps de la page et image de fond */
 body {
     margin-left: 100px;
     margin-right: 100px;
@@ -30,16 +35,19 @@ body {
     background-repeat: repeat;
 }
 
+/* Taille police des balises <p> */
 p {
     font-size: var(--step-1);
 }
 
+/* Suppression de l'effet souligné des liens */
 a {
     text-decoration: none;
 }
 
 /* 
 *** Header ***
+Gère la mise en forme des éléments en haut de page
 */
 
 header {
@@ -48,13 +56,14 @@ header {
     align-items: center;
 }
 
+/* Gère la mise en forme du titre/nom du site
+Animation de couleur réalisé en suivant un tutoriel */
 h1 {
     width: 25%;
     margin-right: 50px;
     margin-left: 50px;
     border-radius: 20px;
     text-align: center;
-    background-color: #121212;
     color: rgb(2, 2, 2);
     font-size: var(--step-4);
     border: 3px solid transparent; 
@@ -65,7 +74,8 @@ h1 {
     animation: h1-animation 2s ease infinite; /* Animation de clignotement */
 }
 
-@keyframes h1-animation {
+/* Animation de clignotement */
+@keyframes h1-animation { 
     0% {
         background-position: 0% 50%; /* Position initiale */
     }
@@ -79,8 +89,10 @@ h1 {
 
 /* 
 *** Navbar ***
+Barre des boutons en dessous du header
 */
 
+/* Bloc regroupant les 2 boutons */
 #barreNav {
     display: flex;
     justify-content: center;
@@ -93,6 +105,8 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* Mise en forme des boutons */
+/* Effet néon lors du survol curseur réalisé en suivant un tutoriel */
 .glow-on-hover {
     display: flex;
     justify-content: center;
@@ -111,6 +125,7 @@ h1 {
     margin-left: 20px;
     margin-right: 20px;
 }
+/* statut avant */
 .glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #7A00FF, #FF00C8, #FF0000);
@@ -133,10 +148,12 @@ h1 {
 .glow-on-hover:active:after {
     background: transparent;
 }
+/* statut avant au survol */
 .glow-on-hover:hover:before {
     opacity: 1;
     transform: scale(1.2);
 }
+/* statut après */
 .glow-on-hover:after {
     z-index: -1;
     content: '';
@@ -148,6 +165,8 @@ h1 {
     top: 0;
     border-radius: 10px;
 }
+
+/* Animation de clignotement */
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
@@ -156,6 +175,7 @@ h1 {
 
 /* 
 *** Main ***
+Gère la mise en forme de la partie principale de la page ( les films )
 */
 
 main {
@@ -168,16 +188,15 @@ main {
     padding: 7px 7px 7px 12px;
 }
 
+/* Affiche de film */
 .affiche {
     height: auto;
     max-width: 15%;
     object-fit: contain;
 }
 
+/* Effet grossissant lors du survol curseur */
 .affiche:hover {
-    height: auto;
-    max-width: 15%;
-    object-fit: contain;
     transform: scale(1.1);
 }
 
@@ -195,6 +214,7 @@ main {
     color: #f38304;
 }
 
+/* Bouton lire la critique */
 #lien {
     background-color: #da1111;
     border-radius: 20px;
@@ -213,6 +233,7 @@ main {
     transform: scale(1.2);
 }
 
+/* Bouton modifier */
 #lien2 {
     background-color: #da1111;
     border-radius: 20px;
@@ -232,6 +253,7 @@ main {
 
 /* 
 *** Footer ***
+Gère la mise en forme du bas de page
 */
 
 footer {
@@ -252,6 +274,8 @@ footer p {
 
 /* 
 *** Responsive ***
+Media queries qui vont agencer/modifier certains éléments différement en fonction de la largeur de la page
+Afin de s'adapter à des appareils moins larges ( tablettes, téléphones )
 */
 
 @media (max-width: 1000px) {

@@ -1,3 +1,5 @@
+/* Code généré sur un site pour rendre la taille des textes responsive
+les step-x seront utilisés en font-size */
 :root {
     --step--2: clamp(0.6944rem, 0.6855rem + 0.0446vw, 0.72rem);
     --step--1: clamp(0.8331rem, 0.8099rem + 0.1163vw, 0.9rem);
@@ -9,6 +11,7 @@
     --step-5: clamp(2.4881rem, 2.1594rem + 1.6435vw, 3.4331rem);
     }
 
+/* Importation et utilisation de la police */
 @font-face {
     font-family: Chelsea;
     src: url(/ressourcesChelsea.ttf)
@@ -18,10 +21,12 @@
     font-family: Chelsea;
 }
 
+/* Suppression de l'effet souligné des liens */
 a {
     text-decoration: none;
 }
 
+/* Corps de la page et image de fond */
 body {
     margin-left: 100px;
     margin-right: 100px;
@@ -30,6 +35,21 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Mise en forme nom du film (élément principal de la page) */
+h1 {
+    color: rgb(34, 245, 2);
+    font-size: var(--step-5);
+    text-align: center;
+}
+
+/* Mise en forme des balises <p> */
+p {
+    color: white;
+    font-size: var(--step-2);
+    text-align: center;
+}
+
+/* Mise en forme du bouton retour */
 #bouton {
     background-color: #da1111;
     border-radius: 20px;
@@ -43,6 +63,7 @@ body {
     margin-right: 20px;
 }
 
+/* Effet survol curseur */
 #bouton:hover {
     cursor: pointer;
     transform: scale(1.2);
@@ -55,17 +76,10 @@ body {
     display: block;
 }
 
-h1 {
-    color: rgb(34, 245, 2);
-    font-size: var(--step-5);
-    text-align: center;
-}
-
-p {
-    color: white;
-    font-size: var(--step-2);
-    text-align: center;
-}
+/* 
+*** Footer ***
+Gère la mise en forme du bas de page
+*/
 
 footer {
     display: flex;
@@ -85,6 +99,8 @@ footer p {
 
 /* 
 *** Responsive ***
+Media queries qui vont agencer/modifier certains éléments différement en fonction de la largeur de la page
+Afin de s'adapter à des appareils moins larges ( tablettes, téléphones )
 */
 
 @media (max-width: 700px) {

@@ -1,7 +1,9 @@
+/* Suppression de l'effet souligné des liens */
 a {
     text-decoration: none;
 }
 
+/* Corps de la page et image de fond */
 body {
     margin-left: 100px;
     margin-right: 100px;
@@ -11,6 +13,7 @@ body {
     color: white;
 }
 
+/* Mise en forme du bouton retour */
 #bouton {
     background-color: #da1111;
     border-radius: 20px;
@@ -24,11 +27,13 @@ body {
     margin-right: 20px;
 }
 
+/* Effet survol curseur */
 #bouton:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
 
+/* Titre */
 h1 {
     text-align: center;
     font-size: 60px;
@@ -36,6 +41,7 @@ h1 {
     font-weight: bold;
 }
 
+/* Formulaires */
 #create {
     text-align: center;
 }
@@ -48,12 +54,18 @@ h1 {
     text-align: center;
 }
 
+/* Mise en forme des balises <p> */
 p {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     color:rgb(8, 247, 4)
 }
+
+/* 
+*** Footer ***
+Gère la mise en forme du bas de page
+*/
 
 footer {
     display: flex;

@@ -1,22 +1,27 @@
 <?php
-
+// Appel et exécution du fichier fonctions
 require_once __DIR__.'/fonctions.php';
+// Connection à la Base De Données
 $pdo = getPDO('mysql:host=db;dbname=cinefiles', 'root', '');
-
+// Utilisation de la fonction qui modifiera un film lors du clic sur le bouton Modifier
+// Si la superglobale $_POST n'est pas vide
+// Avec les valeurs attendues en paramètres
 if (! empty($_POST)) {
     updateFilm($pdo, intval($_GET['id']), $_POST['nom'], $_POST['extrait'], $_POST['pitch'], $_POST['affiche'],
     $_POST['annee']);
 }
-
+// Appel de la fonction qui vas remplir dynamiquement les champs en fonction de l'id dans l'URL ( superglobale $_GET )
 $film = getFilm(intval($_GET['id']), $pdo);
-
+// Propriétés dynamiques pour le template header
 $title = "Update";
 $fichier_css = "form";
+// Appel et exécution du template header
 include "./templates/header.php";
 ?>
     <a href='./index.php' id="bouton">Retour Page Accueil</a>
     <h1>Bienvenue dans la salle des machines<br/>Ici on peut modifier des films dans la BDD</h1>
     <br/>
+    <!-- Formulaire avec les champs des caractéristiques du film à modifier -->
     <form id="update" action="" method="post">
         <div>
             <label for="nom">Nom du film</label>
@@ -46,6 +51,7 @@ include "./templates/header.php";
     De "I saw the devil" à "Dobermann"<br/>
     Vous êtes libres concernant les films que vous ajouterez<br/>
     Merci pour votre attention :-)</p>
+<!-- Appel et exécution du template footer -->
 <?php
     include "./templates/footer.php";
 ?>

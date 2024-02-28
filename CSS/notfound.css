@@ -1,5 +1,6 @@
+/* Mise en forme de la page 404 customisée */
 body {
-    background-image: url(./../ressourcesimagespepeClown.jpg);
+    background-image: url(./../ressources/images/pepeClown.jpg);
 }
 
 h1 {
