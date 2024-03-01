@@ -131,6 +131,10 @@ Il m'a également permis de mettre en pratique des connaissances back fraichemen
 
 Je suis conscient que le résultat n'est pas parfait cependant le "coeur" CRUD est fonctionnel.
 
+Il est possible que je me sois "compliqué la vie" avec la présence d'une relation many to many et donc d'une table intermédiaire (ou pivot) au niveau de la relation films <-> acteurs.
+
+Je voyais cela comme un challenge car en cours nous avons surtout vu des cas plus simples et je dois admettre que cela m'a pris plus de temps que prévu, ayant pour conséquence d'empiéter sur les premiers jours de stage. Par exemple je n'ai pas eu le temps de perfectionner la partie "read" des acteurs lorsque l'on clique sur un film. On obtient un nom (qui est correct) au lieu de plusieurs.
+
 Je vous remercie pour votre attention et espère que vous apprécierez ce mini blog cinéma.
 
 Emmanuel Walther - Apprenti Développeur - DWWM Alençon
