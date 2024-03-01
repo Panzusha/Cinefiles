@@ -109,7 +109,7 @@ Vous pouvez normalement vous connecter à la BDD (pour moi localhost:8082/)
 
 Identifiants par défaut "root" et pas de mdp.
 
-Créer une nouvelle bdd avec le menu en haut à droite, nommez la "cinefiles" sans majuscule ni accent.
+Créez une nouvelle bdd avec le menu en haut à gauche, nommez la "cinefiles" sans majuscule ni accent.
 
 ![bdd2](https://github.com/Panzusha/Cinefiles/assets/102243199/0aa4c841-4cc9-4226-8092-732b0ab85e89)
 
